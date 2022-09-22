@@ -29,8 +29,6 @@ public class ObjectList implements Serializable {
 //******************************************************************************
 
     public double getLowScore(double score) {
-        
-        
         double lowScore = 88.0;
         return lowScore;
     } // end getLowScore method
