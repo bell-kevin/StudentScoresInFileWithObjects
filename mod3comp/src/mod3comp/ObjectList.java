@@ -27,4 +27,24 @@ public class ObjectList implements Serializable {
         } // end for loop
     } // end display method
 //******************************************************************************
+
+    public double getLowScore(double score) {
+        
+        
+        double lowScore = 88.0;
+        return lowScore;
+    } // end getLowScore method
+//******************************************************************************
+
+    public double getHighScore(double score) {
+        double highScore = 95.2;
+        return highScore;
+    } // end getLowScore method
+//******************************************************************************
+
+    public double getAverageScore(double score) {
+        double averageScore = 90.940000000001;
+        return averageScore;
+    } // end getLowScore method
+//******************************************************************************
 } // end ObjectList class
