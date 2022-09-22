@@ -14,7 +14,7 @@ public class Mod3comp {
     public static void main(String[] args) {
         System.out.println("Module 3 Student Scores by Kevin Bell \n");
         Scanner computerKeyboardInput = new Scanner(System.in);
-        String stuff;
+        String stuff = "";
         String[] list = new String[10];
         for (int i = 0; i < 10; i++) {
             if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
@@ -43,6 +43,18 @@ public class Mod3comp {
             while (true) {
                 objectList = (ObjectList) fileIn.readObject();
                 objectList.display();
+                /*
+                for (int i = 0; i < 2; i++) {
+                    if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
+                        System.out.print("");
+                    } else if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) {
+                        System.out.println("");
+                    } // end if/else if condition
+                } // end for loop
+                 */
+                System.out.println("Low score: " + objectList.getLowScore(0));
+                System.out.println("High score: " + objectList.getHighScore(0));
+                System.out.println("Average score: " + objectList.getAverageScore(0));
             } // end while loop
         } catch (EOFException e) { // terminates infinite while loop
         } catch (Exception e) {
