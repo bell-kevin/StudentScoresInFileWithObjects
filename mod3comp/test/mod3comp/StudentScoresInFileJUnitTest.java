@@ -61,6 +61,6 @@ public class StudentScoresInFileJUnitTest {
         Gradebook scores = new ObjectList(sumOfScores, countOfScores);
         double actual = ObjectList.getAverageScore(sumOfScores / countOfScores);
         double result = sumOfScores / countOfScores;
-        assertEquals(result, actual, 0.01);
+        Assert.assertEquals(result, actual, 0.01);
     } // end testAverageScore method
 } // end StudentScoresInFileJUnitTest class
