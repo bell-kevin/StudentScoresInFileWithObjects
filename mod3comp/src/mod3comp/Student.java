@@ -32,7 +32,7 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return name + "\n" + this.score;
-    } // end String override method
+        return name + "\n" + score;
+    } // end String overloaded method
 //******************************************************************************    
 } // end Student class
