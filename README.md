@@ -1,5 +1,5 @@
-# itWorksButNowForTheMath
-it Works But Now For The Math
+# Mod. 3 Comp. Student Scores in a File with objects
+Mod. 3 Comp. Student Scores in a File with objects
 
 ![hi](https://github.com/bell-kevin/itWorksButNowForTheMath/blob/main/everyOther.PNG)
 
