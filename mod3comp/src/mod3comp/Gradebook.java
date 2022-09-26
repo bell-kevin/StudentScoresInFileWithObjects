@@ -54,9 +54,12 @@ public class Gradebook implements Serializable {
     } // end getHighScore method
 //******************************************************************************
 
-    public double getAverageScore(double score) {
-        double averageScore = 90.940000000001;
-        return averageScore;
+    public double getAverageScore() {
+        double sum = 0;
+        for (int i = 0; i < students.size(); i++) {
+            sum += students.get(i).getScore();
+        } // end for loop
+        return sum / students.size();
     } // end getLowScore method
 //******************************************************************************
 } // end ObjectList class
