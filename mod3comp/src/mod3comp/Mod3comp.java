@@ -16,8 +16,9 @@ public class Mod3comp {
         Scanner computerKeyboardInput = new Scanner(System.in);
         double score;
         String name;
-        Student[] list = new Student[5];
-        for (int i = 0; i < 5; i++) {
+        int studentCount = 5;
+        Student[] list = new Student[studentCount];
+        for (int i = 0; i < studentCount; i++) {
             System.out.print("Enter student name: ");
             name = computerKeyboardInput.next();
             System.out.print("Enter test score: ");
@@ -42,7 +43,7 @@ public class Mod3comp {
                 gradebook.display();
                 System.out.println("Low score: " + gradebook.getLowScore());
                 System.out.println("High score: " + gradebook.getHighScore());
-                System.out.println("Average score: " + gradebook.getAverageScore(0));
+                System.out.println("Avg score: " + gradebook.getAverageScore());
             } // end while loop
         } catch (EOFException e) { // terminates infinite while loop
         } catch (Exception e) {
