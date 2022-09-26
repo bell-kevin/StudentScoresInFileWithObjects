@@ -14,10 +14,9 @@ public class Mod3comp {
     public static void main(String[] args) {
         System.out.println("Module 3 Student Scores by Kevin Bell \n");
         Scanner computerKeyboardInput = new Scanner(System.in);
-        String stuff = "";
         double score;
         String name;
-        Student[] list = new Student[10];
+        Student[] list = new Student[5];
         for (int i = 0; i < 5; i++) {
             System.out.print("Enter student name: ");
             name = computerKeyboardInput.next();
