@@ -3,6 +3,10 @@ Mod. 3 Comp. Student Scores in a File with objects
 
 ![hi](https://github.com/bell-kevin/StudentScoresInFileWithObjects/blob/main/Capture.PNG)
 
+
+![.](https://github.com/bell-kevin/StudentScoresInFileWithObjects/blob/main/sendHelp.PNG)
+
+
 == We're Using GitHub Under Protest ==
 
 This project is currently hosted on GitHub.  This is not ideal; GitHub is a
