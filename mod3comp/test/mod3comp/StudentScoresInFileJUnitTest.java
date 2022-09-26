@@ -28,14 +28,17 @@ public class StudentScoresInFileJUnitTest {
     @Parameterized.Parameter(3)
     public Student[] students;
 
+    Student[] studentList = new Student[]{new Student("Kevin", 100.0), new Student("George", 0.0)};
+    Student[] studentList2 = new Student[]{new Student("Anna", 99), new Student("Ben", 51)};
+
     @Parameterized.Parameters
     public Collection<Object[]> data() {
         Object[][] data = new Object[][]{
-             {1, 99, 51, new Student[]{new Student("Anna", 99), new Student("Ben", 51)},
-            {0, 100, 50, new Student[]{new Student("Kevin", 100), new Student("George", 0)},
-            {2, 98, 74},
-            {3, 97, 73},
-            {4, 96, 72}
+            {0, 100, 50, studentList},
+            {1, 99, 51, studentList2},
+            {2, 98, 74, new Student[]{new Student("Anna", 99), new Student("Ben", 51)}},
+            {3, 97, 73, new Student[]{new Student("Anna", 99), new Student("Ben", 51)}},
+            {4, 96, 72, new Student[]{new Student("Anna", 99), new Student("Ben", 51)}}
         };
         return Arrays.asList(data);
     }
@@ -61,6 +64,6 @@ public class StudentScoresInFileJUnitTest {
         Gradebook scores = new ObjectList(sumOfScores, countOfScores);
         double actual = ObjectList.getAverageScore(sumOfScores / countOfScores);
         double result = sumOfScores / countOfScores;
-        Assert.assertEquals(result, actual, 0.01);
+        assertEquals(result, actual, 0.01);
     } // end testAverageScore method
 } // end StudentScoresInFileJUnitTest class
