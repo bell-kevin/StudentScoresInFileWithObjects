@@ -46,7 +46,7 @@ public class Gradebook implements Serializable {
         highScore = students.get(0).getScore();
         for (int i = 1; i < students.size(); i++) {
             Student currentStudent = students.get(i);
-            if (currentStudent.getScore() < highScore) {
+            if (currentStudent.getScore() > highScore) {
                 highScore = currentStudent.getScore();
             } // end if condition
         } // end for loop
