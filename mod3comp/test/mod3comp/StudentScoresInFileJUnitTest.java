@@ -31,12 +31,12 @@ public class StudentScoresInFileJUnitTest {
     @Parameterized.Parameters
     public Collection<Object[]> data() {
         Object[][] data = new Object[][]{
+             {1, 99, 51, new Student[]{new Student("Anna", 99), new Student("Ben", 51)},
             {0, 100, 50, new Student[]{new Student("Kevin", 100), new Student("George", 0)},
-                {1, 99, 51, new Student[]{new Student("Anna", 99), new Student("Ben", 51)},
-                    {2, 98, 74},
-                    {3, 97, 73},
-                    {4, 96, 72}
-                };
+            {2, 98, 74},
+            {3, 97, 73},
+            {4, 96, 72}
+        };
         return Arrays.asList(data);
     }
 
