@@ -60,6 +60,6 @@ public class Gradebook implements Serializable {
             sum += students.get(i).getScore();
         } // end for loop
         return sum / students.size();
-    } // end getLowScore method
+    } // end getAverageScore method
 //******************************************************************************
 } // end ObjectList class
