@@ -50,6 +50,7 @@ public class StudentScoresInFileJUnitTest {
         double result = lowScore;
         Assert.assertEquals(result, actual, 0.01);
     } // end testLowScore method
+//******************************************************************************
 
     @Test
     public void testHighScore() {
@@ -58,6 +59,7 @@ public class StudentScoresInFileJUnitTest {
         double result = highScore;
         Assert.assertEquals(result, actual, 0.01);
     } // end testHighScore method
+//******************************************************************************
 
     @Test
     public void testAverageScore() {
@@ -66,4 +68,5 @@ public class StudentScoresInFileJUnitTest {
         double result = sumOfScores / countOfScores;
         assertEquals(result, actual, 0.01);
     } // end testAverageScore method
+//******************************************************************************    
 } // end StudentScoresInFileJUnitTest class
