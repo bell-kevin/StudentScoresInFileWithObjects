@@ -27,11 +27,11 @@ public class Mod3comp {
                 list[i] = stuff;
             } // end if/else if condition
         } // end for loop
-        ObjectList objectList = new ObjectList(list);
+        Gradebook gradebook = new Gradebook(list);
         String fileName = "namesAndScores.txt";
         try (ObjectOutputStream fileOut // write object
                 = new ObjectOutputStream(new FileOutputStream(fileName))) {
-            fileOut.writeObject(objectList);
+            fileOut.writeObject(gradebook);
             fileOut.reset();
         } catch (Exception e) {
             System.out.println(e.getClass());
@@ -41,8 +41,8 @@ public class Mod3comp {
         try (ObjectInputStream fileIn = new ObjectInputStream( // read object
                 new FileInputStream(fileName))) {
             while (true) {
-                objectList = (ObjectList) fileIn.readObject();
-                objectList.display();
+                gradebook = (Gradebook) fileIn.readObject();
+                gradebook.display();
                 /*
                 for (int i = 0; i < 2; i++) {
                     if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
@@ -52,9 +52,9 @@ public class Mod3comp {
                     } // end if/else if condition
                 } // end for loop
                  */
-                System.out.println("Low score: " + objectList.getLowScore(0));
-                System.out.println("High score: " + objectList.getHighScore(0));
-                System.out.println("Average score: " + objectList.getAverageScore(0));
+                System.out.println("Low score: " + gradebook.getLowScore(0));
+                System.out.println("High score: " + gradebook.getHighScore(0));
+                System.out.println("Average score: " + gradebook.getAverageScore(0));
             } // end while loop
         } catch (EOFException e) { // terminates infinite while loop
         } catch (Exception e) {
