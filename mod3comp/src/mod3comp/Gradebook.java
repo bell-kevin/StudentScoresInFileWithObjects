@@ -1,5 +1,5 @@
 /** ****************************************************************************
- * ObjectList.java
+ * Gradebook.java
  * Kevin Bell
  *
  * The class manages an ArrayList of students.
@@ -9,12 +9,12 @@ package mod3comp;
 import java.io.*;
 import java.util.*;
 
-public class ObjectList implements Serializable {
+public class Gradebook implements Serializable {
 
     ArrayList<String> objects = new ArrayList<>();
 
 //******************************************************************************
-    public ObjectList(String[] list) {
+    public Gradebook(String[] list) {
         for (int i = 0; i < list.length; i++) {
             objects.add(list[i]);
         } // end for loop
