@@ -1,7 +1,7 @@
 # Mod. 3 Comp. Student Scores in a File with objects
 Mod. 3 Comp. Student Scores in a File with objects
 
-![hi](https://github.com/bell-kevin/StudentScoresInFileWithObjects/blob/main/everyOther.PNG)
+![hi](https://github.com/bell-kevin/StudentScoresInFileWithObjects/blob/main/Capture.PNG)
 
 == We're Using GitHub Under Protest ==
 
