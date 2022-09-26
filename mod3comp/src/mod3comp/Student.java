@@ -32,7 +32,6 @@ public class Student implements Serializable {
     }
     @Override
     public String toString(){
-        return "What?";
+        return "i don't know what I'm doing";
     }
-    
 } // end Student class
