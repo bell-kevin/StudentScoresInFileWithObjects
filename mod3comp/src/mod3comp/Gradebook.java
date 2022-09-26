@@ -11,33 +11,47 @@ import java.util.*;
 
 public class Gradebook implements Serializable {
 
-    ArrayList<String> objects = new ArrayList<>();
+    ArrayList<Student> students = new ArrayList<>();
 
 //******************************************************************************
-    public Gradebook(String[] list) {
+    public Gradebook(Student[] list) {
         for (int i = 0; i < list.length; i++) {
-            objects.add(list[i]);
+            students.add(list[i]);
         } // end for loop
     } // end constructor
 //******************************************************************************
 
     public void display() {
-        for (int i = 0; i < objects.size(); i++) {
-            System.out.println(objects.get(i) + " ");
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(students.get(i) + " ");
         } // end for loop
     } // end display method
 //******************************************************************************
 
-    public double getLowScore(double score) {
-        double lowScore = 88.0;
+    public double getLowScore() {
+        double lowScore = 0;
+        lowScore = students.get(0).getScore();
+        for (int i = 1; i < students.size(); i++) {
+            Student currentStudent = students.get(i);
+            if (currentStudent.getScore() < lowScore) {
+                lowScore = currentStudent.getScore();
+            } // end if condition
+        } // end for loop
         return lowScore;
     } // end getLowScore method
 //******************************************************************************
 
-    public double getHighScore(double score) {
-        double highScore = 95.2;
+    public double getHighScore() {
+        double highScore = 1000000;
+        highScore = students.get(0).getScore();
+        for (int i = 1; i < students.size(); i++) {
+            Student currentStudent = students.get(i);
+            if (currentStudent.getScore() < highScore) {
+                highScore = currentStudent.getScore();
+            } // end if condition
+        } // end for loop
         return highScore;
-    } // end getLowScore method
+    } // end getHighScore method
 //******************************************************************************
 
     public double getAverageScore(double score) {
