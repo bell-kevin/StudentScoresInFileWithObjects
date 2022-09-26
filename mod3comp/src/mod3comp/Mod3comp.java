@@ -15,20 +15,18 @@ public class Mod3comp {
         System.out.println("Module 3 Student Scores by Kevin Bell \n");
         Scanner computerKeyboardInput = new Scanner(System.in);
         String stuff = "";
-        String[] list = new String[10];
-        for (int i = 0; i < 10; i++) {
-            if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
-                System.out.print("Enter student name: ");
-                stuff = computerKeyboardInput.next();
-                list[i] = stuff;
-            } else if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) {
-                System.out.print("Enter test score: ");
-                stuff = computerKeyboardInput.next();
-                list[i] = stuff;
-            } // end if/else if condition
+        double score;
+        String name;
+        Student[] list = new Student[10];
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter student name: ");
+            name = computerKeyboardInput.next();
+            System.out.print("Enter test score: ");
+            score = computerKeyboardInput.nextDouble();
+            list[i] = new Student(name, score);
         } // end for loop
         Gradebook gradebook = new Gradebook(list);
-        String fileName = "namesAndScores.txt";
+        String fileName = "gradeBook.txt";
         try (ObjectOutputStream fileOut // write object
                 = new ObjectOutputStream(new FileOutputStream(fileName))) {
             fileOut.writeObject(gradebook);
@@ -43,17 +41,8 @@ public class Mod3comp {
             while (true) {
                 gradebook = (Gradebook) fileIn.readObject();
                 gradebook.display();
-                /*
-                for (int i = 0; i < 2; i++) {
-                    if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
-                        System.out.print("");
-                    } else if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9) {
-                        System.out.println("");
-                    } // end if/else if condition
-                } // end for loop
-                 */
-                System.out.println("Low score: " + gradebook.getLowScore(0));
-                System.out.println("High score: " + gradebook.getHighScore(0));
+                System.out.println("Low score: " + gradebook.getLowScore());
+                System.out.println("High score: " + gradebook.getHighScore());
                 System.out.println("Average score: " + gradebook.getAverageScore(0));
             } // end while loop
         } catch (EOFException e) { // terminates infinite while loop
