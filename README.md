@@ -13,17 +13,11 @@ Module 3 Competency Project: Student Scores in a File
 
 Using the java.io.* library for stream file processing, write an application that does 3 things: it asks the user for input of names and scores and writes that data to a file, with a name on one line and the score on the next; it reads that same data file and prints the data; and it finds the low, high, and average of the scores. After the file has been read, calculate and display the lowest score, highest score, and average score.
 
-Here is the sample session:
-
-m3-2220-studentScores.PNG
-
 Note: You cannot determine the low and high scores and calculate the average in the first part of the project, when the user types the input and you write it to the file. This work must be done in the second part, when you are reading the file.
 
 Hint: Since you know the first line contains a name, and the second line contains a score, you need to handle the even and odd lines differently. Only do the mathematical work when the line contains a score. Use a counter to count the lines read from the file to help you determine how to process that line.
 
 Run the project once to match the sample session and take a screenshot. Run it again with different data and take a screenshot.
-
- 
 
 Submission: the specified screenshots (of execution of the program and successful unit tests) and the root folder for the project
 
